@@ -15,11 +15,11 @@ Now that we have the starting point, let’s get to work coding it out!  Use the
 
 ### Install Dependencies
 - Install the following npm packages:
-  - sqlite3
-  - sequelize
-  - express
-  - express-validator
-  - nodemon
+  - sqlite3 - npm install --save sqlite3
+  - sequelize - npm install --save sequelize
+  - express - npm install express
+  - express-validator - npm install express-validator
+  - nodemon - npm install nodemon
 
 ### Create Express Server
 - Create a file for your server and initialize it on port 3000 using Express.

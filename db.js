@@ -11,6 +11,6 @@ const db = new Sequelize('database', 'username', 'password', {
 
 
 //export
-module.exports = { db, DataTypes }
+module.exports = { db, Sequelize, DataTypes }
 
 //
