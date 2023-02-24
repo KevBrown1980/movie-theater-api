@@ -121,7 +121,7 @@ app.put("/users", async (req, res) => {
 
 
 //   // DELETE a show - unsure how to delete details into a thunderclient request
-
+// dont think delete is working
 
   app.delete("/shows/:id", async (req, res) => {
     try {
@@ -129,7 +129,7 @@ app.put("/users", async (req, res) => {
       const deletedShow = Show.destroy({ where: { id: req.params.id } });
   
       if (deleted[0] > 0) {
-        res.status(200).send({ msg: "Success" });
+        res.status(200).send({ msg: "Success", deletedShow });
       } else {
         throw new Error("Not deleted");
       }
@@ -139,14 +139,14 @@ app.put("/users", async (req, res) => {
   });
 
 // // DELETE a user need to test - unsure how to delete details into a thunderclient request
-
-app.delete("/shows/:id", async (req, res) => {
+// dont think delete is working
+app.delete("/users/:id", async (req, res) => {
     try {
       // Cannot accept body
-      const deletedShow = Show.destroy({ where: { id: req.params.id } });
+      const deletedUsers = User.destroy({ where: { id: req.params.id } });
   
       if (deleted[0] > 0) {
-        res.status(200).send({ msg: "Success" });
+        res.status(200).send({ msg: "Success", deletedUsers });
       } else {
         throw new Error("Not deleted");
       }
